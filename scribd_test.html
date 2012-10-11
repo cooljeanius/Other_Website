@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script type="text/javascript" src='http://www.scribd.com/javascripts/view.js'></script>
+
+<div id='embedded_flash' >
+<a href='http://www.scribd.com'>Scribd</a>
+</div>
+<script type='text/javascript' src='http://www.scribd.com/javascripts/view.js'></script>
+
+<div id='embedded_flash'><a href="http://www.scribd.com">Scribd</a></div>
+
+<script type="text/javascript">
+var scribd_doc = scribd.Document.getDoc( 2659, 'key-6vhdaqehjkeob' );
+
+var oniPaperReady = function(e){
+// scribd_doc.api.setPage(3);
+}
+
+scribd_doc.addParam( 'jsapi_version', 1 );
+scribd_doc.addEventListener( 'iPaperReady', oniPaperReady );
+scribd_doc.write( 'embedded_flash' );
+</script>
+
+<script type="text/javascript">
+var scribd_doc = scribd.Document.getDocFromUrl('http://lib.store.yahoo.net/lib/paulgraham/onlisp.ps', 'PUT-YOUR-SCRIBD-PUBLISHER-ID-HERE');
+
+var oniPaperReady = function(e){
+// scribd_doc.api.setPage(3);
+}
+
+scribd_doc.addEventListener( 'iPaperReady', oniPaperReady );
+scribd_doc.addParam('jsapi_version', 1);
+scribd_doc.addParam('height', 600);
+scribd_doc.addParam('width', 400);
+scribd_doc.addParam('page', 10);
+scribd_doc.addParam('public', true);
+
+scribd_doc.write('embedded_flash');
+</script>
+    
+</body>
+</html>

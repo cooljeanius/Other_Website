@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Podcast</title>
+    <link>http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast</link>
+    <description>Donec arcu risus diam amet sit. Congue tortor cursus risus vestibulum commodo nisl, luctus augue amet quis aenean maecenas sit, donec velit iusto, morbi felis elit et nibh. Vestibulum volutpat dui lacus consectetuer, mauris at suspendisse sit.</description>
+    <item>
+      <title>podcast</title>
+      <link>http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast/Entries/2011/6/29_podcast.html</link>
+      <guid isPermaLink="false">da9623e7-3afd-446a-9b4e-351ce005cf40</guid>
+      <pubDate>Wed, 29 Jun 2011 21:12:48 -0400</pubDate>
+      <description>Consectetuer arcu ipsum ornare pellentesque vehicula, in vehicula diam, ornare magna erat felis wisi a risus. Justo fermentum id. Malesuada eleifend, tortor molestie, a fusce &#x2028;a vel et. Mauris at suspendisse, neque aliquam faucibus adipiscing, vivamus in. Wisi mattis leo suscipit nec amet, &#x2028;nisl fermentum tempor ac a, augue in eleifend in venenatis, cras sit id in vestibulum felis in, sed ligula. In sodales suspendisse mauris quam etiam erat, quia tellus convallis eros rhoncus diam orci, porta lectus esse adipiscing posuere et, nisl arcu vitae laoreet.</description>
+      <iweb:image href="Media/85.5,0,469,4693d7b374d_6c1d56ff_6e278edf.jpg"></iweb:image>
+      <iweb:badge type="movie"></iweb:badge>
+      <iweb:comment enabled="0" count="0" link="http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast/Entries/2011/6/29_podcast.html#comment_layer"></iweb:comment>
+    </item>
+    <iweb:dateFormat>EEEE, MMMM d, yyyy</iweb:dateFormat>
+    <iweb:baseURL>http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast</iweb:baseURL>
+    <iweb:maximumSummaryItems>5</iweb:maximumSummaryItems>
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html manifest="safari/OfflineApp.manifest">
+<head>
+    <title>HelloWorld</title>
+    <!--[if IE]><script>document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/safari/') + '"/>')</script><![endif]-->
+    <base href="safari/">
+    <script id="DC_baseScript">if(navigator.userAgent.indexOf('AppleWebKit/') == -1) document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/safari/') + '"/>')</script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="../Parts/redirector.js"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="box" apple-part="com.apple.Dashcode.part.box"></div>
+    <canvas id="canvas" apple-part="com.apple.Dashcode.part.canvas" class="apple-canvas apple-no-children thing" width="250" height="150" apple-always-show-guides="true"></canvas>
+    <div id="checkbox" apple-part="com.apple.Dashcode.part.checkboxbutton" apple-group="checkbox">
+        <input type="checkbox" name="Checkbox" checked="checked" apple-part="com.apple.Dashcode.part.input" id="input" apple-group="checkbox">
+        <div id="div">Checkbox</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>My Podcast</title>
+    <link>http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast/Podcast.html</link>
+    <description>Donec arcu risus diam amet sit. Congue tortor cursus risus vestibulum commodo nisl, luctus augue amet quis aenean maecenas sit, donec velit iusto, morbi felis elit et nibh. Vestibulum volutpat dui lacus consectetuer, mauris at suspendisse sit.</description>
+    <generator>iWeb 3.0.1</generator>
+    <image>
+      <url>http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast/Podcast_files/skd267685sdc_b.jpg</url>
+      <title>My Podcast</title>
+      <link>http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast/Podcast.html</link>
+    </image>
+    <ttl>60</ttl>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:author>Eric Gallager</itunes:author>
+    <itunes:owner>
+      <itunes:name>Eric Gallager</itunes:name>
+      <itunes:email>egallager@comcast.net</itunes:email>
+    </itunes:owner>
+    <itunes:subtitle>Donec arcu risus diam amet sit. Congue tortor cursus risus vestibulum commodo nisl, luctus augue amet quis aenean maecenas sit, donec velit iusto, morbi felis elit et nibh. Vestibulum volutpat dui lacus consectetuer, mauris at suspendisse sit.</itunes:subtitle>
+    <itunes:summary>Donec arcu risus diam amet sit. Congue tortor cursus risus vestibulum commodo nisl, luctus augue amet quis aenean maecenas sit, donec velit iusto, morbi felis elit et nibh. Vestibulum volutpat dui lacus consectetuer, mauris at suspendisse sit.</itunes:summary>
+    <itunes:image href="http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast/Podcast_files/skd267685sdc_b.jpg"/>
+    <language>en</language>
+    <item>
+      <title>podcast</title>
+      <link>http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast/Entries/2011/6/29_podcast.html</link>
+      <guid isPermaLink="false">da9623e7-3afd-446a-9b4e-351ce005cf40</guid>
+      <pubDate>Wed, 29 Jun 2011 21:12:48 -0400</pubDate>
+      <description>&lt;a href=&quot;http://egallager.s3-website-us-east-1.amazonaws.com/Site/Media/podcast.m4a&quot;&gt;&lt;img src=&quot;http://egallager.s3-website-us-east-1.amazonaws.com/Site/Podcast/Media/85.5,0,469,4693d7b374d_6c1d56ff_6e278edf_1.jpg&quot; style=&quot;float:left; padding-right:10px; padding-bottom:10px; width:157px; height:157px;&quot;/&gt;&lt;/a&gt;Consectetuer arcu ipsum ornare pellentesque vehicula, in vehicula diam, ornare magna erat felis wisi a risus. Justo fermentum id. Malesuada eleifend, tortor molestie, a fusce  a vel et. Mauris at suspendisse, neque aliquam faucibus adipiscing, vivamus in. Wisi mattis leo suscipit nec amet,  nisl fermentum tempor ac a, augue in eleifend in venenatis, cras sit id in vestibulum felis in, sed ligula. In sodales suspendisse mauris quam etiam erat, quia tellus convallis eros rhoncus diam orci, porta lectus esse adipiscing posuere et, nisl arcu vitae laoreet.</description>
+      <enclosure url="http://egallager.s3-website-us-east-1.amazonaws.com/Site/Media/podcast.m4a" length="845148" type="audio/mp4"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Eric Gallager</itunes:author>
+      <itunes:duration>00:01:06</itunes:duration>
+      <itunes:subtitle>Consectetuer arcu ipsum ornare pellentesque vehicula, in vehicula diam, ornare magna erat felis wisi a risus. Justo fermentum id. Malesuada eleifend, tortor molestie, a fusce  a vel et. Mauris at suspendisse, neque aliquam faucibus adipiscing, viva</itunes:subtitle>
+      <itunes:summary>Consectetuer arcu ipsum ornare pellentesque vehicula, in vehicula diam, ornare magna erat felis wisi a risus. Justo fermentum id. Malesuada eleifend, tortor molestie, a fusce  a vel et. Mauris at suspendisse, neque aliquam faucibus adipiscing, vivamus in. Wisi mattis leo suscipit nec amet,  nisl fermentum tempor ac a, augue in eleifend in venenatis, cras sit id in vestibulum felis in, sed ligula. In sodales suspendisse mauris quam etiam erat, quia tellus convallis eros rhoncus diam orci, porta lectus esse adipiscing posuere et, nisl arcu vitae laoreet.</itunes:summary>
+    </item>
+  </channel>
+</rss>

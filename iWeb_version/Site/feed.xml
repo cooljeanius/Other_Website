@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:2F4B8BFA-4F5A-44AA-8C43-520790F847B0</id>
+ <title>Page list Atom feed</title>
+ <updated>2011-08-04T10:11:03-04:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:FCABAD3C-08FE-4E8D-BFFC-2FEDD515D9B4</id>
+  <title>Welcome</title>
+  <title xmlns="urn:iweb:">Welcome</title>
+  <in-navbar xmlns="urn:iweb:">FCABAD3C-08FE-4E8D-BFFC-2FEDD515D9B4</in-navbar>
+  <link rel="alternate" href="Welcome.html"/>
+  <updated>2011-08-04T10:11:03.001-04:00</updated>
+  <content>Welcome</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:2A97FBF8-E8DA-40D8-B71C-4629FF3E3EAF</id>
+  <title>Podcast</title>
+  <title xmlns="urn:iweb:">Podcast</title>
+  <in-navbar xmlns="urn:iweb:">2A97FBF8-E8DA-40D8-B71C-4629FF3E3EAF</in-navbar>
+  <link rel="alternate" href="Podcast/Podcast.html"/>
+  <updated>2005-09-20T21:08:38-04:00</updated>
+  <content>Podcast</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:5275B2F9-B15A-41AC-8089-113F8B9E1283</id>
+  <title>Presidential Candidates Club Pics</title>
+  <title xmlns="urn:iweb:">Presidential Candidates Club Pics</title>
+  <in-navbar xmlns="urn:iweb:">5275B2F9-B15A-41AC-8089-113F8B9E1283</in-navbar>
+  <link rel="alternate" href="Presidential_Candidates_Club_Pics.html"/>
+  <updated>2011-08-04T10:11:03.002-04:00</updated>
+  <content>Presidential Candidates Club Pics</content>
+ </entry>
+</feed>
