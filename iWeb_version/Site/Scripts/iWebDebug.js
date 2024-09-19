@@ -244,7 +244,12 @@ function onMouseOverDebugMenu()
 {if(window.event.shiftKey)
 {var debugMenu=$("debugMenu");debugMenu.setStyle({height:"",width:""});startFadeIn(debugMenu);}}
 function documentResourceURL(ext)
-{resourceUrl="";htmlUrl=document.URL;while((htmlUrl.length>0)&&(htmlUrl.slice(-5)!=".html"))
+{resourceUrl="";htmlUrl=document.URL;
+if (!isAuthorizedBaseURL(htmlUrl)) {
+    console.warn("Unauthorized base URL: " + htmlUrl);
+    return "";
+}
+while((htmlUrl.length>0)&&(htmlUrl.slice(-5)!=".html"))
 {htmlUrl=htmlUrl.slice(0,-1);}
 if(htmlUrl.length>0)
 {var components=htmlUrl.split("/");var filename=components.pop();filename=filename.slice(0,-5);var folderName=filename+"_files";components.push(folderName);components.push(filename+ext);resourceUrl=components.join("/");}
@@ -252,6 +257,10 @@ return isAuthorizedURL(resourceUrl) ? resourceUrl : "";}
 function isAuthorizedURL(url)
 {var authorizedPatterns = [/^https:\/\/example\.com\/.*$/, /^https:\/\/another-example\.com\/.*$/]; // Add authorized patterns here
 return authorizedPatterns.some(pattern => pattern.test(url));}
+
+function isAuthorizedBaseURL(url)
+{var authorizedBasePatterns = [/^https:\/\/example\.com\/.*$/, /^https:\/\/another-example\.com\/.*$/]; // Add authorized base patterns here
+return authorizedBasePatterns.some(pattern => pattern.test(url));}
 function showCSS()
 {cssUrl=documentResourceURL(".css");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
 {window.open(cssUrl,"CSS");} else {console.warn("Unauthorized URL: " + cssUrl);}}
