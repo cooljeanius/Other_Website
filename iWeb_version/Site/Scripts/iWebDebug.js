@@ -275,10 +275,10 @@ function isAuthorizedBaseURL(url)
 return authorizedBasePatterns.some(pattern => pattern.test(url));}
 function showCSS()
 {cssUrl=documentResourceURL(".css");if(cssUrl.length>0)
-{window.open(cssUrl,"CSS");} else {console.warn("Unauthorized URL or empty URL: " + cssUrl);}}
+{if (isAuthorizedURL(cssUrl)) { window.open(cssUrl,"CSS"); } else { console.warn("Unauthorized URL or empty URL: " + cssUrl); }}}
 function showJavaScript()
 {cssUrl=documentResourceURL(".js");if(cssUrl.length>0)
-{window.open(cssUrl,"JavaScript");} else {console.warn("Unauthorized URL or empty URL: " + cssUrl);}}
+{if (isAuthorizedURL(cssUrl)) { window.open(cssUrl,"JavaScript"); } else { console.warn("Unauthorized URL or empty URL: " + cssUrl); }}}
 function closeDebugMenu()
 {var debugMenu=$("debugMenu");debugMenu.setStyle({height:"10px",width:"10px"});startFadeOut(debugMenu);}
 function dumpEntryData()
