@@ -253,7 +253,11 @@ while((htmlUrl.length>0)&&(htmlUrl.slice(-5)!=".html"))
 {htmlUrl=htmlUrl.slice(0,-1);}
 if(htmlUrl.length>0)
 {var components=htmlUrl.split("/");var filename=components.pop();filename=filename.slice(0,-5);var folderName=filename+"_files";components.push(folderName);components.push(filename+ext);resourceUrl=components.join("/");}
-return isAuthorizedURL(resourceUrl) ? resourceUrl : "";}
+if (!isAuthorizedURL(resourceUrl)) {
+    console.warn("Unauthorized resource URL: " + resourceUrl);
+    return "";
+}
+return resourceUrl;}
 function isAuthorizedURL(url)
 {var authorizedPatterns = [
     /^https:\/\/example\.com\/.*$/,
