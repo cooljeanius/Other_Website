@@ -249,11 +249,14 @@ function documentResourceURL(ext)
 if(htmlUrl.length>0)
 {var components=htmlUrl.split("/");var filename=components.pop();filename=filename.slice(0,-5);var folderName=filename+"_files";components.push(folderName);components.push(filename+ext);resourceUrl=components.join("/");}
 return resourceUrl;}
+function isAuthorizedURL(url)
+{var authorizedPatterns = [/^https:\/\/example\.com\/.*$/, /^https:\/\/another-example\.com\/.*$/]; // Add authorized patterns here
+return authorizedPatterns.some(pattern => pattern.test(url));}
 function showCSS()
-{cssUrl=documentResourceURL(".css");if(cssUrl.length>0)
+{cssUrl=documentResourceURL(".css");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
 {window.open(cssUrl,"CSS");}}
 function showJavaScript()
-{cssUrl=documentResourceURL(".js");if(cssUrl.length>0)
+{cssUrl=documentResourceURL(".js");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
 {window.open(cssUrl,"JavaScript");}}
 function closeDebugMenu()
 {var debugMenu=$("debugMenu");debugMenu.setStyle({height:"10px",width:"10px"});startFadeOut(debugMenu);}
