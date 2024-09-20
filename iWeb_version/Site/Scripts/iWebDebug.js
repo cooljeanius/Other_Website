@@ -246,9 +246,8 @@ function onMouseOverDebugMenu()
 function documentResourceURL(ext)
 {resourceUrl="";htmlUrl=document.URL;while((htmlUrl.length>0)&&(htmlUrl.slice(-5)!=".html"))
 {htmlUrl=htmlUrl.slice(0,-1);}
-if(htmlUrl.length>0)
-{var components=htmlUrl.split("/");var filename=components.pop();filename=filename.slice(0,-5);var folderName=filename+"_files";components.push(folderName);components.push(filename+ext);resourceUrl=components.join("/");}
-if (!isAuthorizedURL(resourceUrl)) { resourceUrl = ""; }
+if(htmlUrl.length>0 && isAuthorizedURL(htmlUrl))
+{var components=htmlUrl.split("/");if (components.every(isAuthorizedURL)) {var filename=components.pop();filename=filename.slice(0,-5);var folderName=filename+"_files";components.push(folderName);components.push(filename+ext);resourceUrl=components.join("/");}}
 return resourceUrl;}
 function isAuthorizedURL(url)
 {var authorizedPatterns = [/^https:\/\/example\.com\/.*$/, /^https:\/\/another-example\.com\/.*$/]; // Add authorized patterns here
