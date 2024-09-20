@@ -2,6 +2,18 @@
 
 if (typeof unityObject == "undefined")
 var unityObject = function() {
+    function escapeHTML(str) {
+        return str.replace(/[&<>"']/g, function(match) {
+            const escape = {
+                '&': '&amp;',
+                '<': '&lt;',
+               '>': '&gt;',
+               '"': '&quot;',
+               "'": '&#39;'
+           };
+           return escape[match];
+       });
+   }
 	var
 	pluginName = "Unity Player",
 	pluginMimeType = "application/vnd.unity",
@@ -654,8 +666,8 @@ var unityObject = function() {
 			var tc = getColor(params, "textcolor");
 			var bc = getColor(params, "bordercolor");
 			if (ua.win && ua.ie) {
-				var it = '<img alt="' + msg + '" src="' + img + '" width="' + imgWidth + '" height="' + imgHeight + '" style="border-width: 0px;" />';
-				var at = '<a href="' + url + '" title="' + msg + '" onclick="' + onclick + '"';
+				var it = '<img alt="' + escapeHTML(msg) + '" src="' + escapeHTML(img) + '" width="' + escapeHTML(imgWidth) + '" height="' + escapeHTML(imgHeight) + '" style="border-width: 0px;" />';
+				var at = '<a href="' + escapeHTML(url) + '" title="' + escapeHTML(msg) + '" onclick="' + escapeHTML(onclick) + '"';
 				if (fullSizeMissing) {
 					at += ' style="display: block; height: ' + appendPX(imgHeight) + '; position: relative; top: ' + imageOffset + ';"';
 				}
@@ -671,8 +683,8 @@ var unityObject = function() {
 					st += " border: 1px solid #" + bc + ";";
 				}
 				if (fullSizeMissing) {
-					var ft = '<div style="width: ' + appendPX(imgWidth) + '; margin: auto; position: relative; top: 50%;">' + at + '</div>';
-					re.outerHTML = '<div id="' + id + '" style="width: ' + appendPX(width) + '; height: ' + appendPX(height) + '; text-align: center;' + st + '">' + ft + '</div>';
+					var ft = '<div style="width: ' + appendPX(escapeHTML(imgWidth)) + '; margin: auto; position: relative; top: 50%;">' + at + '</div>';
+					re.outerHTML = '<div id="' + escapeHTML(id) + '" style="width: ' + appendPX(escapeHTML(width)) + '; height: ' + appendPX(escapeHTML(height)) + '; text-align: center;' + st + '">' + ft + '</div>';
 				}
 				else {
 					re.outerHTML = '<div id="' + id + '" style="' + st + '">' + at + '</div>';
