@@ -9,9 +9,22 @@
 
 <script type="text/javascript">
 // <![CDATA[
+function getSanitizedQueryParams() {
+    const allowedParams = ['param1', 'param2']; // Add allowed parameters here
+    const urlParams = new URLSearchParams(window.location.search);
+    const sanitizedParams = new URLSearchParams();
+    for (const [key, value] of urlParams.entries()) {
+        if (allowedParams.includes(key)) {
+            sanitizedParams.append(key, value);
+        }
+    }
+    return sanitizedParams.toString();
+}
+
 if(navigator.userAgent.match(/iPhone/))
 {
-    location = 'phoneshow.html' + location.search;
+    const sanitizedQuery = getSanitizedQueryParams();
+    location = 'phoneshow.html' + (sanitizedQuery ? '?' + sanitizedQuery : '');
 }
 // ]]>
 </script>
