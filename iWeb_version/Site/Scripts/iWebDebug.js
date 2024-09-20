@@ -257,7 +257,7 @@ if (!isAuthorizedURL(resourceUrl)) {
     console.warn("Unauthorized resource URL: " + resourceUrl);
     return "";
 }
-return isAuthorizedURL(resourceUrl) ? resourceUrl : "";}
+return resourceUrl;}
 function isAuthorizedURL(url)
 {var authorizedPatterns = [
     /^https:\/\/example\.com\/.*$/,
@@ -286,10 +286,10 @@ try {
     return false;
 }}
 function showCSS()
-{cssUrl=documentResourceURL(".css");if(cssUrl.length>0)
+{cssUrl=documentResourceURL(".css");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
 { window.open(cssUrl,"CSS"); } else { console.warn("Unauthorized URL or empty URL: " + cssUrl); }}
 function showJavaScript()
-{cssUrl=documentResourceURL(".js");if(cssUrl.length>0)
+{cssUrl=documentResourceURL(".js");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
 { window.open(cssUrl,"JavaScript"); } else { console.warn("Unauthorized URL or empty URL: " + cssUrl); }}
 function closeDebugMenu()
 {var debugMenu=$("debugMenu");debugMenu.setStyle({height:"10px",width:"10px"});startFadeOut(debugMenu);}
