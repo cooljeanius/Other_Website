@@ -248,15 +248,15 @@ function documentResourceURL(ext)
 {htmlUrl=htmlUrl.slice(0,-1);}
 if(htmlUrl.length>0 && isAuthorizedURL(htmlUrl))
 {var components=htmlUrl.split("/");if (components.every(isAuthorizedURL)) {var filename=components.pop();filename=filename.slice(0,-5);var folderName=filename+"_files";components.push(folderName);components.push(filename+ext);resourceUrl=components.join("/");}}
-return resourceUrl;}
+if (isAuthorizedURL(resourceUrl)) { return resourceUrl; } else { return ""; }}
 function isAuthorizedURL(url)
 {var authorizedPatterns = [/^https:\/\/example\.com\/.*$/, /^https:\/\/another-example\.com\/.*$/]; // Add authorized patterns here
 return authorizedPatterns.some(pattern => pattern.test(url));}
 function showCSS()
-{cssUrl=documentResourceURL(".css");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
+{cssUrl=documentResourceURL(".css");if(cssUrl.length>0)
 {window.open(cssUrl,"CSS");}}
 function showJavaScript()
-{cssUrl=documentResourceURL(".js");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
+{cssUrl=documentResourceURL(".js");if(cssUrl.length>0)
 {window.open(cssUrl,"JavaScript");}}
 function closeDebugMenu()
 {var debugMenu=$("debugMenu");debugMenu.setStyle({height:"10px",width:"10px"});startFadeOut(debugMenu);}
