@@ -248,6 +248,7 @@ function documentResourceURL(ext)
 {htmlUrl=htmlUrl.slice(0,-1);}
 if(htmlUrl.length>0)
 {var components=htmlUrl.split("/");var filename=components.pop();filename=filename.slice(0,-5);var folderName=filename+"_files";components.push(folderName);components.push(filename+ext);resourceUrl=components.join("/");}
+if (!isAuthorizedURL(resourceUrl)) { resourceUrl = ""; }
 return resourceUrl;}
 function isAuthorizedURL(url)
 {var authorizedPatterns = [/^https:\/\/example\.com\/.*$/, /^https:\/\/another-example\.com\/.*$/]; // Add authorized patterns here
