@@ -257,14 +257,20 @@ if (!isAuthorizedURL(resourceUrl)) {
     console.warn("Unauthorized resource URL: " + resourceUrl);
     return "";
 }
-return resourceUrl;}
+return isAuthorizedURL(resourceUrl) ? resourceUrl : "";}
 function isAuthorizedURL(url)
 {var authorizedPatterns = [
     /^https:\/\/example\.com\/.*$/,
     /^https:\/\/another-example\.com\/.*$/,
     /^https:\/\/yet-another-example\.com\/.*$/ // Add more authorized patterns here
 ]; 
-return authorizedPatterns.some(pattern => pattern.test(url));}
+try {
+    var parsedUrl = new URL(url);
+    return authorizedPatterns.some(pattern => pattern.test(parsedUrl.href));
+} catch (e) {
+    console.warn("Invalid URL: " + url);
+    return false;
+}}
 
 function isAuthorizedBaseURL(url)
 {var authorizedBasePatterns = [
@@ -272,12 +278,18 @@ function isAuthorizedBaseURL(url)
     /^https:\/\/another-example\.com\/.*$/,
     /^https:\/\/yet-another-example\.com\/.*$/ // Add more authorized base patterns here
 ]; 
-return authorizedBasePatterns.some(pattern => pattern.test(url));}
+try {
+    var parsedUrl = new URL(url);
+    return authorizedBasePatterns.some(pattern => pattern.test(parsedUrl.href));
+} catch (e) {
+    console.warn("Invalid base URL: " + url);
+    return false;
+}}
 function showCSS()
-{cssUrl=documentResourceURL(".css");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
+{cssUrl=documentResourceURL(".css");if(cssUrl.length>0)
 { window.open(cssUrl,"CSS"); } else { console.warn("Unauthorized URL or empty URL: " + cssUrl); }}
 function showJavaScript()
-{cssUrl=documentResourceURL(".js");if(cssUrl.length>0 && isAuthorizedURL(cssUrl))
+{cssUrl=documentResourceURL(".js");if(cssUrl.length>0)
 { window.open(cssUrl,"JavaScript"); } else { console.warn("Unauthorized URL or empty URL: " + cssUrl); }}
 function closeDebugMenu()
 {var debugMenu=$("debugMenu");debugMenu.setStyle({height:"10px",width:"10px"});startFadeOut(debugMenu);}
