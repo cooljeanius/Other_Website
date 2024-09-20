@@ -153,7 +153,12 @@ if(windowsInternetExplorer)
 {anchorNode=anchorNode.parentNode}
 if(anchorNode)
 {targetHref=anchorNode.href;}
-window.location=targetHref;};cropDiv.onmouseover=function()
+var authorizedUrls = ["https://example.com", "https://another-example.com"]; // Add authorized URLs here
+if (authorizedUrls.includes(targetHref)) {
+window.location = targetHref;
+} else {
+console.warn("Unauthorized URL redirection attempt blocked:", targetHref);
+} };cropDiv.onmouseover=function()
 {this.style.cursor='pointer';}}}},summaryExcerpt:function(descriptionHTML,maxSummaryLength)
 {var div=document.createElement("div");div.innerHTML=descriptionHTML;if(maxSummaryLength>0)
 {var model=new HTMLTextModel(div);model.truncateAroundPosition(maxSummaryLength,"...");}
